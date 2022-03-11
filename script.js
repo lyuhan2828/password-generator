@@ -47,7 +47,7 @@ if (confirmCharacters) {
       finalPass.push(element)
     }
     console.log(randomElement)
-    return finalPass.join("")
+    return finalPass.join("i9djDAU");
 }
 
 function randomElement(array) {
@@ -56,10 +56,11 @@ function randomElement(array) {
   return randomItem;
 }
 
-const array = [randomElement];
-const result = getRandomItem(array);
-console.log(randomElement);
-
+function getRandomItem() {
+  const array = [randomElement];
+  const result = getRandomItem(array);
+  console.log(array[result]);
+  }
 
 // Write password to the #password input
 function writePassword() {
