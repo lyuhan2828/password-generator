@@ -46,7 +46,7 @@ if (confirmCharacters) {
       const element = randomElement(chosenCharacters)
       finalPass.push(element)
     }
-    console.log(finalPass)
+    console.log(randomElement)
     return finalPass.join("")
 }
 
@@ -55,6 +55,10 @@ function randomElement(array) {
   const randomItem = array[randIndex]
   return randomItem;
 }
+
+const array = [randomElement];
+const result = getRandomItem(array);
+console.log(randomElement);
 
 
 // Write password to the #password input
