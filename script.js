@@ -1,8 +1,8 @@
 // Assignment code here
-var alphabetLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var alphabetUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var characters = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+", "=", "_", "<", ">", "/", "?"];
+var alphabetLower = 'abcdefghijklmnopqrstuvwxyz'
+var alphabetUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+var number = '0123456789'
+var characters = '~!@#$%^&*()_+'
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -26,7 +26,7 @@ if (!confirmLowercase && !confirmUppercase && !confirmNumber && !confirmCharacte
   alert("Please choose at least one character type")
   return null
 }
-var chosenCharacters = [];
+var chosenCharacters = '';
 
 
 if (confirmLowercase) {
@@ -45,16 +45,23 @@ if (confirmCharacters) {
     for (let i = 0; i < passwLength; i++) {
       const element = randomElement(chosenCharacters)
       finalPass.push(element)
+      console.log(element)
     }
-    console.log(randomElement)
-    return finalPass.join("i9djDAU");
+
+   
+    console.log(finalPass)
+    return finalPass.join("");
 }
 
 function randomElement(array) {
-  const randIndex = Math.floor(Math.random * array.length);
+  console.log(array)
+  const randIndex = Math.floor(Math.random() * array.length);
+  console.log(randIndex)
   const randomItem = array[randIndex]
+  console.log(randomItem)
   return randomItem;
 }
+
 
 function getRandomItem() {
   const array = [randomElement];
